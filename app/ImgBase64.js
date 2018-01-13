@@ -1,3 +1,4 @@
+const newStr = require('../img/333.jpg')
 module.exports = function(){
 	function getBase64(url,callback){
         //通过构造函数来创建的 img 实例，在赋予 src 值后就会立刻下载图片，相比 createElement() 创建 <img> 省去了 append()，也就避免了文档冗余和污染
@@ -16,7 +17,7 @@ module.exports = function(){
             callback?callback(dataURL):null; //调用回调函数
         };
     }
-	getBase64(newSrc,(dataURL)=>{
+	getBase64(newStr,(dataURL)=>{
         console.log(dataURL);
     });
 }
